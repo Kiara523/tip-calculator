@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="./images/logo.svg" alt="company logo" />
+    </header>
+
+    <main>
+      <section class="calculator-container">
+        <!-- left side -->
+        <div class="left-side">
+          <div class="bill">
+            <label for="bill" class="small-fs">Bill</label>
+            <span class="bill-error-msg" aria-live="polite"></span>
+            <div class="bill-container">
+              <input
+                id="bill"
+                class="bill-input"
+                type="text"
+                inputmode="decimal"
+                name="bill"
+                data-role="bill-amount"
+                placeholder="0"
+                autofocus
+              />
+            </div>
+          </div>
+          <h4 class="small-fs select-tip">Select Tip %</h4>
+          <section class="btn-container">
+            <button type="button" value="5" class="percentage-btn">5%</button
+            ><button type="button" value="10" class="percentage-btn">10%</button
+            ><button type="button" value="15" class="percentage-btn">15%</button
+            ><button type="button" value="25" class="percentage-btn">25%</button
+            ><button type="button" value="50" class="percentage-btn">50%</button
+            ><input
+              type="text"
+              inputmode="numeric"
+              id="customBtn"
+              class="custom-tip"
+              placeholder="Custom"
+            />
+          </section>
+          <div class="people-error">
+            <label for="num-people" class="small-fs people"
+              >Number of People</label
+            >
+            <span class="error-msg" aria-live="polite"></span>
+          </div>
+          <div class="people-container">
+            <input
+              id="numPeople"
+              class="num-people"
+              type="text"
+              inputmode="numeric"
+              name="num-people"
+              data-role="num-people"
+              placeholder="0"
+            />
+          </div>
+        </div>
+        <!-- END leftside -->
+        <div class="display">
+          <div id="tipAmpunt" class="tip-amount">
+            <p class="small-fs">
+              <span>Tip Amount</span> <br />
+              <small>/ person</small>
+            </p>
+            <p id="tipAmount" class="final-amount">$0.00</p>
+          </div>
+          <div id="total" class="total">
+            <p class="small-fs">
+              <span>Total</span><br />
+              <small>/ person</small>
+            </p>
+            <p id="totalPerson" class="final-amount">$0.00</p>
+          </div>
+
+          <button id="resetBtn" class="reset" disabled>reset</button>
+        </div>
+      </section>
+    </main>
+    <script defer src="script.js"></script>
+  </body>
+</html>

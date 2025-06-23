@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-bg-color: hsl(0, 100%, 100%);
+  --body-bg-color: hsl(185, 41%, 84%);
+  --dark-grey-text: hsl(186, 14%, 43%);
+  --dark-green: hsl(183, 100%, 15%);
+  --input-bg-color: hsl(180, 33%, 97%);
+  --light-grey-text: hsl(184, 14%, 56%);
+  --hover-active-state: hsl(172, 67%, 45%);
+
+  --input-fs: 1.5rem;
+  --fw: 700;
+}
+
+body {
+  min-height: 100svh;
+  font-family: "Space Mono", monospace;
+  font-weight: var(--fw);
+  font-size: var(--input-fs);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--body-bg-color);
+  color: var(--dark-grey-text);
+}
+
+.logo {
+  margin-block: 1.5rem;
+}
+
+.calculator-container {
+  background-color: var(--main-bg-color);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.bill-input,
+.num-people {
+  display: block;
+  width: 100%;
+  background-color: var(--input-bg-color);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font: inherit;
+  color: var(--dark-green);
+  text-align: end;
+  padding-inline-end: 1rem;
+  padding-block: 0.5rem;
+}
+
+.bill-input:focus-visible,
+.num-people:focus-visible,
+.custom-tip:focus-visible {
+  border: 1px solid var(--hover-active-state);
+}
+
+button {
+  font: inherit;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+button[disabled] {
+  background-color: hsl(184, 47%, 26%);
+  cursor: not-allowed;
+}
+
+button[disabled]:hover {
+  background-color: hsl(184, 47%, 26%);
+  cursor: not-allowed;
+}
+
+.small-fs {
+  font-size: 1rem;
+}
+
+.display {
+  background-color: var(--dark-green);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.custom-tip,
+.percentage-btn {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.custom-tip {
+  background-color: var(--input-bg-color);
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font: inherit;
+  text-align: end;
+  padding-inline-end: 1rem;
+  padding-block: 0.4rem;
+  color: var(--dark-green);
+}
+
+.percentage-btn {
+  background-color: var(--dark-green);
+  color: var(--input-bg-color);
+  padding-block: 0.4rem;
+  cursor: pointer;
+}
+
+.percentage-btn.focused {
+  background-color: var(--hover-active-state);
+  color: var(--dark-green);
+}
+
+.percentage-btn:focus-within,
+.reset:focus {
+  background-color: var(--hover-active-state);
+  color: var(--dark-green);
+}
+
+.select-tip {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.tip-amount,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total {
+  margin-top: 1.5rem;
+}
+
+span {
+  color: var(--input-bg-color);
+}
+
+.final-amount {
+  color: var(--hover-active-state);
+  font-size: 2rem;
+}
+
+.error-msg {
+  color: red;
+  font-size: 1rem;
+}
+
+.bill-error-msg {
+  color: red;
+  font-size: 1rem;
+}
+
+.custom-tip.error,
+.bill-input.error,
+.num-people.error {
+  border: 1px solid red;
+}
+
+.reset {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  color: var(--dark-green);
+  /* background-color: hsl(184, 47%, 26%); */
+  background-color: var(--hover-active-state);
+  cursor: pointer;
+}
+
+.reset.active {
+  background-color: var(--hover-active-state);
+}
+
+.reset:hover {
+  background-color: hsl(184, 35%, 60%);
+}
+
+.people-error {
+  padding-top: 2rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bill-container {
+  position: relative;
+}
+
+.bill-container::before {
+  content: "";
+  background: url(./images/icon-dollar.svg) no-repeat center/contain;
+  width: 0.7em;
+  height: 0.7em;
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+.people-container {
+  position: relative;
+}
+
+.people-container::before {
+  content: "";
+  background: url(./images/icon-person.svg) no-repeat center/contain;
+  width: 0.7em;
+  height: 0.7em;
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+
+@media screen and (width < 380px) {
+  .btn-container {
+    grid-template-columns: minmax(50px, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 820px) {
+  .logo {
+    margin-bottom: 4rem;
+    display: grid;
+    place-content: center;
+  }
+
+  .calculator-container {
+    flex-direction: row;
+    padding: 2rem;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .btn-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .percentage-btn,
+  .custom-tip {
+    max-width: 110px;
+  }
+
+  .display {
+    min-width: 350px;
+    margin-top: 0;
+    margin-left: 2rem;
+    padding-inline: 2.5rem;
+    padding-block: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .reset {
+    margin-top: 100px;
+  }
+
+  .bill-input,
+  .num-people {
+    width: 100%;
+  }
+}
