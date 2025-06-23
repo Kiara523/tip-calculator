@@ -21,8 +21,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: https://github.com/Kiara523/tip-calculator
+- Live Site URL: https://kiara523.github.io/tip-calculator/
 
 ### Built with
 
@@ -30,9 +30,3 @@ Users should be able to:
 - CSS
 - Mobile-first workflow
 - Javascript - ES Module
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)

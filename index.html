@@ -19,7 +19,8 @@
 
     <main>
       <section class="calculator-container">
-        <!-- left side -->
+        <!-- left side large screen-->
+        <!-- Bill section -->
         <div class="left-side">
           <div class="bill">
             <label for="bill" class="small-fs">Bill</label>
@@ -37,6 +38,7 @@
               />
             </div>
           </div>
+          <!-- tip selection section -->
           <h4 class="small-fs select-tip">Select Tip %</h4>
           <section class="btn-container">
             <button type="button" value="5" class="percentage-btn">5%</button
@@ -52,12 +54,14 @@
               placeholder="Custom"
             />
           </section>
+          <!-- error handling -->
           <div class="people-error">
             <label for="num-people" class="small-fs people"
               >Number of People</label
             >
             <span class="error-msg" aria-live="polite"></span>
           </div>
+          <!-- section number of guest  -->
           <div class="people-container">
             <input
               id="numPeople"
@@ -71,6 +75,8 @@
           </div>
         </div>
         <!-- END leftside -->
+
+        <!-- display final calculation -->
         <div class="display">
           <div id="tipAmpunt" class="tip-amount">
             <p class="small-fs">
@@ -91,6 +97,6 @@
         </div>
       </section>
     </main>
-    <script defer src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
