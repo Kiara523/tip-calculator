@@ -18,7 +18,7 @@
     </header>
 
     <main>
-      <section class="calculator-container">
+      <div class="calculator-container">
         <!-- left side large screen-->
         <!-- Bill section -->
         <div class="left-side">
@@ -39,24 +39,30 @@
             </div>
           </div>
           <!-- tip selection section -->
-          <h4 class="small-fs select-tip">Select Tip %</h4>
-          <section class="btn-container">
-            <button type="button" value="5" class="percentage-btn">5%</button
-            ><button type="button" value="10" class="percentage-btn">10%</button
-            ><button type="button" value="15" class="percentage-btn">15%</button
-            ><button type="button" value="25" class="percentage-btn">25%</button
-            ><button type="button" value="50" class="percentage-btn">50%</button
-            ><input
-              type="text"
-              inputmode="numeric"
-              id="customBtn"
-              class="custom-tip"
-              placeholder="Custom"
-            />
+          <section>
+            <h4 class="small-fs select-tip">Select Tip %</h4>
+            <div class="btn-container">
+              <button type="button" value="5" class="percentage-btn">5%</button
+              ><button type="button" value="10" class="percentage-btn">
+                10%</button
+              ><button type="button" value="15" class="percentage-btn">
+                15%</button
+              ><button type="button" value="25" class="percentage-btn">
+                25%</button
+              ><button type="button" value="50" class="percentage-btn">
+                50%</button
+              ><input
+                type="text"
+                inputmode="numeric"
+                id="customBtn"
+                class="custom-tip"
+                placeholder="Custom"
+              />
+            </div>
           </section>
           <!-- error handling -->
           <div class="people-error">
-            <label for="num-people" class="small-fs people"
+            <label for="numPeople" class="small-fs people"
               >Number of People</label
             >
             <span class="error-msg" aria-live="polite"></span>
@@ -95,7 +101,7 @@
 
           <button id="resetBtn" class="reset" disabled>reset</button>
         </div>
-      </section>
+      </div>
     </main>
     <script type="module" src="script.js"></script>
   </body>
